@@ -14,13 +14,14 @@ class Ui{
       const productList =  document.getElementById('product-list');
       const element = document.createElement('div');
       element.innerHTML = ` 
-      <div class="card text-center mb-4 ">
-      <div class="card-body">
-          <strong>Product Name </strong>:   ${product.name}
-          <strong>Product Price </strong>:  ${product.price}
-          <strong>Product brand </strong>:  ${product.brand}
+     
+      <div class="card-body  text-center mb-4">
+          <strong> Name </strong>:   ${product.name}  &nbsp;
+          <strong>Price </strong>: $ ${product.price} &nbsp;
+          <strong>brand </strong>:  ${product.brand}  &nbsp;
+          <a href="#" class=" btn btn-danger "  name="delete" >Delete</a>
 
-      </div>
+      
   </div>
  
       `;
@@ -33,10 +34,25 @@ class Ui{
     }
 
 
-    addDelete(){
+    addDelete(element){
+        if(element.name === 'delete'){
+            console.log(element.parentElement.parentElement.remove());
+            this.showMessage('Product Deleted Successfully', 'info')
+        }
+
 
     }
-    addMessage(){
+    showMessage(message, cssClass){
+       const div = document.createElement('div');
+       div.className = `alert alert-${cssClass} mt-2`;
+       div.appendChild(document.createTextNode(message));
+       // show
+      const container = document.querySelector('.container');
+       const app = document.querySelector('#app');
+       container.insertBefore(div, app);
+       setTimeout(function(){
+        document.querySelector('.alert').remove();
+       }, 2000)
 
     }
 }
@@ -53,12 +69,16 @@ class Ui{
    const ui = new Ui();
    ui.addProduct(product);
    ui.resetForm();
+   ui.showMessage(' Product Added Succesfully', 'success')
 
 
    e.preventDefault()
-
- 
      
+ } );
+
+document.getElementById('product-list').addEventListener('click', function(e){
+ const ui = new Ui();
+ ui.addDelete(e.target);
  } )
 
  
