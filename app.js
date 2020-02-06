@@ -23,8 +23,13 @@ class Ui{
 
 // Dom Events
  document.getElementById('product-form')
-  .addEventListener('submit', function(){
-alert('buenos dias alegria')
+  .addEventListener('submit', function(e){
+   const name = document.getElementById('name').value;
+   const price = document.getElementById('price').value;
+   const brand = document.getElementById('brand').value;
+   e.preventDefault()
+
+
      
  } )
 
