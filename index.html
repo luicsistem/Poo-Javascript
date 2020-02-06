@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>computer product</title>
+</head>
+<body>
+    <main class="container">
+       
+    <section id="app" class="row pt-5">
+       <article class="col-md-4  card  " style="background-color: #e3f2fd;" >
+           <div class="card-header"> 
+               <h4 class="text-center" >Add a Computer Product</h4>
+            </div>
+            <form class="card-body" id="product-form" >
+                <div class="form-group">
+                    <input type="text"  id="name" class="form-control" placeholder="Product Name" >
+                </div>
+                <div class="form-group">
+                    <input type="number" step="0.01" class="form-control" placeholder="Product Price">
+                </div>
+                <div class="form-group">
+                    <input type="text"  id="name" class="form-control" placeholder="Product Brand" >
+                </div>
+                    <input type="submit" value="save" class="btn btn-primary btn-block " >
+            </form>
+        
+       </article>
+       <article class="col-md-8" id="product-list" >
+         
+    </article>
+    </section>
+      
+   
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
