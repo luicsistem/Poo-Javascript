@@ -67,6 +67,9 @@ class Ui{
    const product = new Product(name, price , brand);
 
    const ui = new Ui();
+   if(name=== '' || price === '' || brand=== ''){ 
+      return ui.showMessage('Complete Fields ', 'danger');
+   };
    ui.addProduct(product);
    ui.resetForm();
    ui.showMessage(' Product Added Succesfully', 'success')
@@ -82,3 +85,4 @@ document.getElementById('product-list').addEventListener('click', function(e){
  } )
 
  
+// guardar en un local storage

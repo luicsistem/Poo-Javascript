@@ -6,9 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>computer product</title>
+    <style>
+        .fullScreen {
+            width: 100%;
+            min-height: 100vh;
+          }
+          .nav-foo{
+            background-color: #563d7c;
+            color: #fff;
+          }
+    </style>
 </head>
 <body>
-    <main class="container">
+    <nav id="navbar-example2" class="navbar nav-foo ">
+        <a class="navbar-brand" href="#">App Poo</a>  </nav>
+    <main class="container fullScreen ">
        
     <section id="app" class="row pt-5">
        <article class="col-md-4  card  " style="background-color: #e3f2fd;" >
@@ -37,7 +49,10 @@
   
 
     </main>
-
+    <footer class=" d-flex p-3  justify-content-sm-around nav-foo ">
+        <p>&copy derechos reservados | 2020</p>
+        <p>Developed by Luis Castro</p>
+    </footer>
     <script src="app.js"></script>
 </body>
 </html>
